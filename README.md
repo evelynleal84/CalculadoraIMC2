@@ -5,6 +5,10 @@ Desc
 <!-- You can add more screenshots here if you like -->
 Screenshots
 
+- validação de campo vazio
+- mostrar mensagem pro usuário
+<img src="https://github.com/evelynleal84/CalculadoraIMC2/assets/167266225/c86151a3-c5de-452b-a09a-0b59a0e5a9c3" width= 260/>
+
 ## Tecnologias
 Techs
 
