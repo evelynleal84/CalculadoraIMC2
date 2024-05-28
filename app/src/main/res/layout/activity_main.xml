@@ -5,6 +5,50 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
+    
+    <LinearLayout
+        android:id="@+id/vg_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/gradiente_bg"
+        android:layout_marginBottom="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:src="@drawable/ic_weight"
+            android:layout_margin="24dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginBottom="16dp"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            app:tint="@color/white"/>
+
+        <TextView
+            android:id="@+id/tv_CalculadoraIMC"
+            android:layout_margin="24dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textSize="24dp"
+            android:textColor="@color/white"
+            android:text="Calculadora IMC" />
+
+        <TextView
+            android:id="@+id/tv_descricao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginBottom="48dp"
+            android:text="Preencha todos os campos para calcular seu IMC"
+            android:textColor="@color/white" />
+
+    </LinearLayout>
 
 
     <Button
@@ -18,6 +62,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
@@ -33,6 +78,9 @@
         android:layout_height="48dp"
         android:layout_margin="16dp"
         android:padding="8dp"
+        android:maxLength="4"
+        android:drawableEnd="@drawable/ic_height"
+        android:background="@drawable/rounded_bg"
         android:hint="Digite sua altura ex: 1.70"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -42,11 +90,19 @@
         android:id="@+id/edt_peso"
         android:layout_width="match_parent"
         android:layout_height="48dp"
-        android:layout_margin="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/rounded_bg"
+        android:drawableEnd="@drawable/ic_weight"
         android:hint="Digite seu peso ex: 70.200"
         android:inputType="numberDecimal"
-        app:layout_constraintTop_toTopOf="parent"
+        android:maxLength="6"
+        app:hintEnabled="false"
+        android:padding="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/vg_header" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
