@@ -13,7 +13,7 @@ Esse projeto é um aplicativo Android, para desenvolvê-lo foi utilizado a ligua
    - LinearLayout
    - ConstraintLayout
 - Views
-   -ImageView
+   - ImageView
   - TextView
   - EditText
   - Button
